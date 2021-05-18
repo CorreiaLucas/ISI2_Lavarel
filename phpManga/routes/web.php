@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('mangas',[MangaController::class, 'index']);
-Route::get('dessinateurs',[DessinateurController::class, 'dessinateur'])
+Route::get('dessinateurs',[DessinateurController::class, 'index']);
