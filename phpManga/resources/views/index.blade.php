@@ -4,6 +4,8 @@
         <th> Titre </th>
         <th> Prix </th>
         <th> Couverture </th>
+        <th> Nom Dessinateur</th>
+        <th> Prenom Dessinateur</th>
     </thread>
     @foreach ($mangas as $manga)
         <tr>
@@ -11,14 +13,8 @@
             <td> {{$manga ->titre}}</td>
             <td> {{$manga ->prix}}</td>
             <td> {{$manga ->couverture}}</td>
-        </tr>
-    @endforeach
-
-    @foreach ($dessinateurs as $dessinateur)
-        <tr>
-            <td> {{$dessinateur ->id_dessinateur}}</td>
-            <td> {{$dessinateur ->nom_dessinateur}}</td>
-            <td> {{$dessinateur ->prenom_dessinateur}}</td>
+            <td> {{$manga ->nom_dessinateur}}</td>
+            <td> {{$manga ->prenom_dessinateur}}</td>
         </tr>
     @endforeach
 </table>
