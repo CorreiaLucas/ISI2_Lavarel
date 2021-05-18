@@ -12,4 +12,5 @@
             <td> {{$manga ->prix}}</td>
             <td> {{$manga ->couverture}}</td>
         </tr>
+    @endforeach
 </table>
