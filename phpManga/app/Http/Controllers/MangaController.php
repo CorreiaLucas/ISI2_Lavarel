@@ -14,7 +14,9 @@ class MangaController extends Controller
      */
     public function index()
     {
-        //
+        $manga = new Manga();
+        $manga = $manga->getAll();
+        return view('index',compact('manga'));
     }
 
     /**

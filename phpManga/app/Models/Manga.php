@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Manga extends Model
 {
     use HasFactory;
+
+    public function getAll(){
+        $mangas = DB::table('manga')->get();
+        return $mangas; 
+    }
 }
