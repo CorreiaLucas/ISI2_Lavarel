@@ -25,7 +25,7 @@ class MangaFactory extends Factory
             'nomDessinateur'=>$this->faker->lastName,
             'nomScenariste'=>$this->faker->lastName,
             'genre'=>$this->faker->sentence(1,false),
-            'prix'=>$this->faker->sentence(1,false),
+            'prix'=>$this->faker->randomFloat(2,0,50),
             'titre'=>$this->faker->sentence(3,true),
             'couverture'=>$this->faker->sentence(1,false) .'JPG',
         ];
