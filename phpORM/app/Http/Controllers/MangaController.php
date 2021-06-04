@@ -16,4 +16,13 @@ class MangaController extends Controller
         $mangas = Manga::all();
         return view ('index', compact('mangas'));
     }
+    public function show(Manga $manga)
+    {
+        return view('manga', compact('manga'));
+    }
+    public function destroy(Manga $manga)
+    {
+        $manga -> delete();
+        return back()->with('info', 'le manga a bien été supprimé de la base de données');
+    }
 }
