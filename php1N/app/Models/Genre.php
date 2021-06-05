@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Genre extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable =['lib-genre'];
+
+    public function mangas(){
+        return $this->hasMany(Manga::class);
+    }
 }
+

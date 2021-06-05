@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Dessinateur extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable =['nom_dessinateur','prenom_dessinateur'];
+
+    public function mangas(){
+        return $this->hasMany(Manga::class);
+    }
 }

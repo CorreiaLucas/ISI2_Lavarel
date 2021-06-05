@@ -14,9 +14,9 @@ class MangasController extends Controller
      */
     public function index()
     {
-        //
+        $mangas = Mangas::all();
+        return view ('index', compact('mangas'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -44,10 +44,14 @@ class MangasController extends Controller
      * @param  \App\Models\Mangas  $mangas
      * @return \Illuminate\Http\Response
      */
-    public function show(Mangas $mangas)
+    public function show(Manga $manga)
     {
-        //
+        $dessinateur = $manga->dessinateur;
+        $scenariste = $manga->scenariste;
+        $genre = $manga->genre;
+        return view('manga', compact('manga'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -78,8 +82,13 @@ class MangasController extends Controller
      * @param  \App\Models\Mangas  $mangas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mangas $mangas)
+    public function destroy(Manga $manga)
     {
-        //
+        $manga -> delete();
+        return back()->with('info', 'le manga a bien été supprimé de la base de données');
     }
+   
+    
+    
 }
+
