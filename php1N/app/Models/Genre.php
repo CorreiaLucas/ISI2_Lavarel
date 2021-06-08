@@ -9,10 +9,10 @@ class Genre extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable =['lib-genre'];
+    protected $fillable =['lib_genre'];
 
     public function mangas(){
-        return $this->hasMany(Manga::class);
+        return $this->hasMany(Mangas::class);
     }
 }
 

@@ -12,7 +12,7 @@
                 <div class="content">
                     <p>Dessinateur : {{$dessinateur->nom_dessinateur .' '. $dessinateur->prenom_dessinateur }}</p>
                     <p>Scénariste : {{$scenariste->nom_scenariste .' '. $scenariste->prenom_scenariste  }}</p>
-                    <p>Genre : {{$genre->lib-genre }}</p>
+                    <p>Genre : {{$genre->lib_genre }}</p>
                     <hr>
                     <p>Prix : {{$manga->prix }}</p>
                 </div>

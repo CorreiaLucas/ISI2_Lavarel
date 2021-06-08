@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MangasController;
+use App\Http\Controllers\CollectionController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +18,6 @@ use App\Http\Controllers\MangasController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::resource('mangas',MangasController::class);
+Route::resource('collections',CollectionController::class);
