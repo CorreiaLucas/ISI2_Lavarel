@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 Route::resource('mangas',MangaController::class);
 Route::get('testformulaire',[TestFormController::class,'getInfos']);
-Route::post('message',[TestFormController::class,'postInfos']);
+Route::post('testformulaire',[TestFormController::class,'postInfos']);
 
 
