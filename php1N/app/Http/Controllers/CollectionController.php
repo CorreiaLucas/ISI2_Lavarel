@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mangas;
+use App\Models\Collection;
 use Illuminate\Http\Request;
 
-class MangasController extends Controller
+class CollectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class MangasController extends Controller
      */
     public function index()
     {
-        $mangas = Mangas::all();
-        return view ('index', compact('mangas'));
+        //
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -41,25 +41,21 @@ class MangasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Mangas  $mangas
+     * @param  \App\Models\Collection  $collection
      * @return \Illuminate\Http\Response
      */
-    public function show(Manga $manga)
+    public function show(Collection $collection)
     {
-        $dessinateur = $manga->dessinateur;
-        $scenariste = $manga->scenariste;
-        $genre = $manga->genre;
-        return view('manga', compact('manga','dessinateur','scenariste','genre'));
+        //
     }
-    
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mangas  $mangas
+     * @param  \App\Models\Collection  $collection
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mangas $mangas)
+    public function edit(Collection $collection)
     {
         //
     }
@@ -68,10 +64,10 @@ class MangasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mangas  $mangas
+     * @param  \App\Models\Collection  $collection
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mangas $mangas)
+    public function update(Request $request, Collection $collection)
     {
         //
     }
@@ -79,16 +75,11 @@ class MangasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mangas  $mangas
+     * @param  \App\Models\Collection  $collection
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Manga $manga)
+    public function destroy(Collection $collection)
     {
-        $manga -> delete();
-        return back()->with('info', 'le manga a bien été supprimé de la base de données');
+        //
     }
-   
-    
-    
 }
-

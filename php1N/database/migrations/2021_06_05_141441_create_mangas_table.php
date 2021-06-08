@@ -18,19 +18,19 @@ class CreateMangasTable extends Migration
             $table->unsignedBigInteger('dessinateur_id');
             $table->foreign('dessinateur_id')
                 ->references('id')
-                ->on('dessinateur')
+                ->on('dessinateurs')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->unsignedBigInteger('scenariste_id');
             $table->foreign('scenariste_id')
                 ->references('id')
-                ->on('scenariste')
+                ->on('scenaristes')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->unsignedBigInteger('genre_id');
             $table->foreign('genre_id')
                 ->references('id')
-                ->on('genre')
+                ->on('genres')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->double('prix');
