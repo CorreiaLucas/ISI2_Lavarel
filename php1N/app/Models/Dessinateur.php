@@ -12,6 +12,6 @@ class Dessinateur extends Model
     protected $fillable =['nom_dessinateur','prenom_dessinateur'];
 
     public function mangas(){
-        return $this->hasMany(Manga::class);
+        return $this->hasMany(Mangas::class);
     }
 }

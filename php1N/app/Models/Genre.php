@@ -12,7 +12,7 @@ class Genre extends Model
     protected $fillable =['lib-genre'];
 
     public function mangas(){
-        return $this->hasMany(Manga::class);
+        return $this->hasMany(Mangas::class);
     }
 }
 
