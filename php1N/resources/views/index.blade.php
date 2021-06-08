@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('Layout')
 
 @section('titrePage')
     Liste des Mangas
@@ -30,7 +30,7 @@
                         <tr>
                             <td> {{ $manga->id }} </td>
                             <td><strong>{{ $manga->titre}}</strong>  </td>
-                            <td> {{ $manga->genre->lib-genre }}</td>
+                            <td> {{ $manga->genre->lib_genre }}</td>
                             <td><a class="btn btn-primary" href="{{ route('mangas.show', $manga->id) }}">Voir</a></td>
                         </tr>
                     @endforeach
