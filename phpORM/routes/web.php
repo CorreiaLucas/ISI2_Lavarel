@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MangaController;
+use App\Http\Controllers\TestFormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('mangas',MangaController::class);
+Route::get('testformulaire',[TestFormController::class,'getInfos']);
+Route::post('message',[TestFormController::class,'postInfos']);
+
+
