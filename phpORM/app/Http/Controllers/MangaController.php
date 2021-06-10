@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Manga;
 use Illuminate\Http\Request;
+use App\Http\Requests\InsertMangaRequest;
 
 class MangaController extends Controller
 {
@@ -25,4 +26,12 @@ class MangaController extends Controller
         $manga -> delete();
         return back()->with('info', 'le manga a bien été supprimé de la base de données');
     }
+    public function create(){
+        return view('create');
+    }
+    public function store(InsertMangaRequest $request){
+        Manga::create($request->all());
+        return view('confirm');
+    }
+
 }
