@@ -34,4 +34,13 @@ class MangaController extends Controller
         return view('confirm');
     }
 
+    public function edit(Manga $manga){
+        return view('edit',compact('manga'));
+    }
+
+    public function update(InsertMangaRequest $request, Manga $manga){
+        return back()->with('info','le manga a bien été modifié dans la base de données');
+    }
+
+
 }

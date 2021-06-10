@@ -19,6 +19,8 @@
         </header>
         <div class="card-content">
         	<div class="content">
+			
+		<td><a class="btn btn-primary" href="{{ route('mangas.create')}}">Ajouter un manga </a> </td>
         		<table class="table is-hoverable">
         			<thread>
         				<tr>
@@ -34,9 +36,8 @@
         					<td>{{ $manga->id}} </td>
         					<td><strong>{{$manga ->titre}}</strong></td>
         					<td>{{$manga->genre}}</td>
-        					<td>
-        						<a class="btn btn-primary" href="{{ route('mangas.show', $manga->id)}}"> Voir </a>
-        					</td>
+        					<td><a class="btn btn-primary" href="{{ route('mangas.show', $manga->id)}}">Voir </a></td>
+							<td> <a class="btn btn-warning" href ="{{route('mangas.edit',$manga->id)}}">Modifier </a>
         					<td>
         						<form action="{{route('mangas.destroy',$manga->id)}}" method="post">
         							@csrf
